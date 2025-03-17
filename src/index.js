@@ -1,17 +1,90 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//first activity -4
+/*class Customer extends React.Component{
+  render(){
+    return <h2> I am from {this.props.city
+  }</h2>;
+}
+}
+class Details extends React.Component{
+  render(){
+    return (
+      <div>
+        <h1>hello</h1>
+        <Customer city="Chennai"/>
+        </div>
+    )
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<Details />);*/
+// Second Activity
+/*class Customer extends React.Component{
+  render(){
+    return <h2> I am from {this.props.city
+  }</h2>;
+}
+}
+class Details extends React.Component{
+  render(){
+    const cityname= "AMIRTSAR";
+    return (
+      <div>
+        <h1>hello</h1>
+        <Customer city= {cityname}/>
+        </div>
+    )
+  }
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Details />);*/
+
+// Third Activity
+/*class Customer extends React.Component{
+  render(){
+    return <h2> I am from {this.props.customerDetails.country
+  }</h2>;
+}
+}
+class Details extends React.Component{
+  render(){
+    const customerinfo= {city: 'Banglore', country:'India'};
+    return (
+      <div>
+        <h1>hello</h1>
+        <Customer customerDetails= {customerinfo}/>
+        </div>
+    )
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Details />);*/
+
+//fourth activity 
+class Customer extends React.Component{
+ constructor(props){
+    super (props);
+    this.info = {location:"Tamil Nadu"};
+  }
+  render(){
+    return <h2> I am from {this.props.city},{this.info.location}!</h2>;
+  }
+}
+
+class Details extends React.Component{
+  render(){
+    return (
+      <div>
+        <h1>hello</h1>
+        <Customer city="Chennai"/>
+        </div>
+    );
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Details />);
